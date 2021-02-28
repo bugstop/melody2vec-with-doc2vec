@@ -1,0 +1,1 @@
+Please download [the Lakh MIDI Dataset](https://colinraffel.com/projects/lmd/) and extract `lmd_full.tar.gz` here.
