@@ -1,4 +1,4 @@
-## melody2vec
+## Melody Embedding - melody2vec
 
 melody2vec with doc2vec based on [Tatsunori Hirai's work.](https://github.com/TatsunoriHirai/Melody2vec)
 
