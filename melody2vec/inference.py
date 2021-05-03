@@ -14,6 +14,7 @@ sims = model.docvecs.most_similar([model.docvecs[0]], topn=10)
 print(sims)
 
 inferred = model.infer_vector(melody[0][1].split(' '), alpha=alpha, steps=epoch)
+# print(type(inferred), inferred.tolist())
 sims = model.docvecs.most_similar([inferred], topn=10)
 print(sims)
 

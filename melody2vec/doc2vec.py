@@ -17,9 +17,9 @@ window_size = 8
 min_count = 1
 sampling_threshold = 1e-5
 negative_size = 5
-train_epoch = 300
+train_epoch = 20000
 dm = 0             # 0 = dbow; 1 = dmpv
-worker_count = 1   # number of parallel processes
+worker_count = 8   # number of parallel processes
 pretrained = 'w2v.model'
 
 model = gensim.models.Doc2Vec(
