@@ -13,15 +13,18 @@ dependencies:
   - boto3=1.17.12=pyhd3eb1b0_0
   - botocore=1.20.12=pyhd3eb1b0_1
   - brotlipy=0.7.0=py36h2bbff1b_1003
-  - ca-certificates=2021.4.13=haa95532_1
+  - ca-certificates=2021.5.25=haa95532_1
   - cachetools=4.2.1=pyhd3eb1b0_0
-  - certifi=2020.12.5=py36haa95532_0
+  - certifi=2021.5.30=py36haa95532_0
   - cffi=1.14.5=py36hcd4344a_0
   - chainer=6.3.0=py_0
   - chardet=3.0.4=py36haa95532_1003
+  - click=8.0.1=pyhd3eb1b0_0
   - cryptography=3.3.1=py36hcd4344a_1
   - cycler=0.10.0=py36haa95532_0
   - filelock=3.0.12=py_0
+  - flask=1.1.2=pyhd3eb1b0_0
+  - flask-cors=3.0.10=pyhd3eb1b0_0
   - freetype=2.10.4=hd328e21_0
   - gensim=3.8.3=py36hd77b12b_2
   - google-api-core=1.25.1=pyhd3eb1b0_0
@@ -35,7 +38,10 @@ dependencies:
   - icu=58.2=ha925a31_3
   - idna=2.10=pyhd3eb1b0_0
   - idna_ssl=1.1.0=py36haa95532_0
+  - importlib-metadata=3.10.0=py36haa95532_0
   - intel-openmp=2020.2=254
+  - itsdangerous=2.0.1=pyhd3eb1b0_0
+  - jinja2=3.0.0=pyhd3eb1b0_0
   - jmespath=0.10.0=py_0
   - joblib=0.17.0=py_0
   - jpeg=9b=hb83a4c4_2
@@ -51,6 +57,7 @@ dependencies:
   - m2w64-gcc-libs-core=5.3.0=7
   - m2w64-gmp=6.1.0=2
   - m2w64-libwinpthread-git=5.0.0.4634.697f757=2
+  - markupsafe=2.0.1=py36h2bbff1b_0
   - matplotlib=3.3.2=0
   - matplotlib-base=3.3.2=py36hba9282a_0
   - mkl=2020.2=256
@@ -86,6 +93,7 @@ dependencies:
   - s3transfer=0.3.4=pyhd3eb1b0_0
   - scikit-learn=0.23.2=py36h47e9c7a_0
   - scipy=1.5.2=py36h9439919_0
+  - seaborn=0.11.1=pyhd3eb1b0_0
   - setuptools=50.3.2=py36haa95532_2
   - sip=4.19.8=py36h6538335_0
   - six=1.15.0=py36haa95532_0
@@ -100,11 +108,13 @@ dependencies:
   - urllib3=1.26.3=pyhd3eb1b0_0
   - vc=14.1=h0510ff6_4
   - vs2015_runtime=14.16.27012=hf0eaf9b_3
+  - werkzeug=1.0.1=pyhd3eb1b0_0
   - wheel=0.36.0=pyhd3eb1b0_0
   - win_inet_pton=1.1.0=py36haa95532_0
   - wincertstore=0.2=py36h7fe50ca_0
   - xz=5.2.5=h62dcd97_0
   - yarl=1.5.1=py36he774522_0
+  - zipp=3.4.1=pyhd3eb1b0_0
   - zlib=1.2.11=h62dcd97_4
   - zstd=1.4.5=h04227a9_0
   - pip:
