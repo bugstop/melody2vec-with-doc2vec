@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+</head>
+<body>
+<div style="text-align: center; background: #fafafa; padding: 20px">
+  <div>
+    <span style="display: inline-block; font-size: 32px; width: 150px; border-radius: 10px; height: 64px; margin-right: 20px; line-height: 64px">歌曲搜索</span>
+    <input id="input" placeholder="{{ filename }}" value="{{ filename }}" style="border: 1px solid #333333; height: 60px; width: 600px; border-radius: 30px; padding-left: 30px; font-size: larger">
+    <span onclick="search()" style="display: inline-block; font-size: 22px; width: 150px; background: #333333; color: #fafafa; border: 1px solid #333333; border-radius: 10px; height: 62px; margin-left: 20px; line-height: 62px">查询</span>
+  </div>
+  <div style="margin-top: 10px"> 查询设置： &emsp;
+    <span><input type="checkbox" id="setting1"> 上传旋律 &emsp;</span>
+    <span><input type="checkbox" id="setting2"> 反向查询</span>
+  </div>
+</div>
+
+{% if results %}
+    <div style="height: 60px; text-align: center; background: #333333; border-bottom: #eeeeee solid 2px; color: #fafafa">
+      <div style="width: 100px; display: inline-block; margin: auto; line-height: 60px; height: 60px; font-size: 19px; font-weight: bold"> 搜索结果 </div>
+      <div style="width: 100px; display: inline-block; font-size: 19px; font-weight: bold"> 歌曲索引 </div>
+      <div style="width: 400px; display: inline-block; font-size: 19px; font-weight: bold"> 文件名 </div>
+      <div style="width: 100px; display: inline-block; font-size: 19px; font-weight: bold"> 相似度 </div>
+      <div style="width: 130px; display: inline-block; font-size: 19px; font-weight: bold"> 操作 </div>
+      <div style="width: 150px; display: inline-block; font-size: 19px; font-weight: bold"> 评分 </div>
+    </div>
+    {% for result in results: %}
+    <div style="height: 60px; text-align: center; background: #fafafa; border-bottom: #eeeeee solid 2px;">
+      <div style="width: 100px; display: inline-block; margin: auto; line-height: 60px; height: 60px;"> {{ result.0 }} </div>
+      <div style="width: 100px; display: inline-block;"> {{ result.1 }} </div>
+      <div style="width: 400px; display: inline-block; font-family: Monaco, monospace"> {{ result.2 }} </div>
+      <div style="width: 100px; display: inline-block;"> {{ result.3 }} </div>
+      <div style="width: 130px; display: inline-block;"> <a href="#">播放</a> &emsp;  <a href="#">下载</a> </div>
+      <div style="width: 150px; display: inline-block;"> ✰ ✰ ✰ ✰ ✰ </div>
+    </div>
+    {% endfor %}
+{% else %}
+    <div style="margin-top: 30px; text-align: center; color: darkgrey">无结果</div>
+{% endif %}
+
+</body>
+
+<script>
+function search() {
+  let filename = document.getElementById("input").value;
+  let upload = document.getElementById("setting1").checked;
+  let reverse = document.getElementById("setting2").checked;
+  console.log(filename, upload, reverse)
+  window.location.href = "./?filename=" + filename + "&infer=" + upload + "&negative=" + reverse;
+}
+</script>
+
+</html>
