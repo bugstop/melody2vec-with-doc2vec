@@ -1,5 +1,5 @@
-import gensim
 import json
+import gensim
 import logging
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
@@ -18,9 +18,9 @@ min_count = 1
 sampling_threshold = 1e-5
 negative_size = 5
 train_epoch = 20000
-dm = 0             # 0 = dbow; 1 = dmpv
-worker_count = 8   # number of parallel processes
-pretrained = 'w2v.model'
+dm = 0                     # 0 = dbow; 1 = dmpv
+worker_count = 8           # number of parallel processes
+pretrained = 'w2v.model'   # optional
 
 model = gensim.models.Doc2Vec(
     data, vector_size=vector_size, window=window_size,
@@ -31,10 +31,3 @@ model = gensim.models.Doc2Vec(
 )
 
 model.save('d2v.bin')
-
-# 2021-02-25 17:51:03,236 : INFO : EPOCH - 300 :
-#     training on 957629 raw words (852631 effective
-#     words) took 15.7s, 54480 effective words/s
-# 2021-02-25 17:51:03,236 : INFO : training on a
-#     287288700 raw words (255790174 effective words)
-#     took 4829.6s, 52964 effective words/s
